@@ -10,3 +10,4 @@ Windows Server + Domain Controller
 Windows 11 Machines
 Docker server with DVWA, WebGoat, and juice shop
 
+This is a new addition test
