@@ -22,6 +22,7 @@ Splunk Enterprise is deployed as an LXC container within Proxmox.
 > **Note:** I used the Proxmox VE Helper Script to deploy Splunk Enterprise. I’m aware some people prefer not to run scripts directly on the Proxmox host. For this test lab, I’m comfortable with that tradeoff, but I’ve included a manual installation alternative below.
 
 📸 **Screenshot:** Proxmox VM/LXC overview showing existing lab components
+![Proxmox VM/LXC overview showing existing lab components](/Screenshots/existing proxmox.png)
 
 ---
 
@@ -51,7 +52,7 @@ If you prefer not to use helper scripts, Splunk Enterprise can also be installed
 
 From my Kali Linux VM, I navigated to the Splunk Web interface using the IP address and port specified during installation.
 
-After logging in with the credentials from `splunk.creds` — success. Splunk was up and running.
+After logging in with the credentials from `splunk.creds` success! Splunk was up and running.
 
 📸 **Screenshot:** Splunk login page  
 📸 **Screenshot:** Splunk dashboard after first login
@@ -146,7 +147,7 @@ In Splunk:
 
 `index=windows`
 
-Logs appeared — indexing was working.
+Logs appeared which means indexing was working!
 
 📸 **Screenshot:** Windows event logs in Splunk search
 
