@@ -23,15 +23,15 @@ This document contains documentation, guides, and reference material I found use
 ## Splunk Forwarder Resources
 
 - **Splunk Universal Forwarder Documentation**  
-  https://docs.splunk.com/Documentation/Forwarder  
+  https://help.splunk.com/en/data-management/forward-data/universal-forwarder-manual/10.2/about-the-universal-forwarder/about-the-universal-forwarder  
   Official documentation covering forwarder installation and configuration.
 
 - **Universal Forwarder Installation – Windows**  
-  https://docs.splunk.com/Documentation/Forwarder/latest/Forwarder/Installtheuniversalforwarder  
+  https://help.splunk.com/en/data-management/forward-data/universal-forwarder-manual/10.2/install-the-universal-forwarder/install-a-windows-universal-forwarder 
   Platform-specific installation details for Windows systems.
 
 - **Universal Forwarder Installation – Linux**  
-  https://docs.splunk.com/Documentation/Forwarder/latest/Forwarder/Installtheuniversalforwarder  
+  https://help.splunk.com/en/data-management/forward-data/universal-forwarder-manual/10.2/install-the-universal-forwarder/install-a-nix-universal-forwarder
   Platform-specific installation details for Linux systems.
 
 ---
@@ -43,11 +43,11 @@ This document contains documentation, guides, and reference material I found use
   Detailed explanation of inputs.conf stanzas and options.
 
 - **Receiving Data (ports, forwarding, indexes)**  
-  https://docs.splunk.com/Documentation/Splunk/latest/Forwarding/Receivingdata  
+  https://help.splunk.com/en/splunk-enterprise/forward-and-process-data/forwarding-and-receiving-data/9.0/introduction-to-forwarding/about-forwarding-and-receiving
   Explanation of how Splunk receives data from forwarders.
 
 - **Indexes and Index Management**  
-  https://docs.splunk.com/Documentation/Splunk/latest/Admin/Indexes  
+  https://help.splunk.com/en/splunk-enterprise/administer/manage-indexers-and-indexer-clusters/9.4/manage-indexes/about-managing-indexes  
   How indexes work, how to create them, and common pitfalls.
 
 ---
@@ -59,7 +59,7 @@ This document contains documentation, guides, and reference material I found use
   How Splunk ingests Windows Event Logs via the Universal Forwarder.
 
 - **Windows Event Log Channel Reference**  
-  https://learn.microsoft.com/en-us/windows/win32/eventlog/event-log-channels  
+  https://learn.microsoft.com/en-us/windows/win32/wes/windows-event-log-reference  
   Microsoft reference for understanding Windows event log channels and structure.
 
 ---
@@ -94,7 +94,7 @@ This document contains documentation, guides, and reference material I found use
   Introduction to searching and reporting in Splunk.
 
 - **Search Processing Language (SPL) Reference**  
-  https://docs.splunk.com/Documentation/Splunk/latest/SearchReference  
+  https://docs.splunk.com/Splexicon:Searchprocessinglanguage  
   Comprehensive reference for SPL commands and syntax.
 
 ---
