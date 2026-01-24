@@ -34,10 +34,13 @@ Using the Proxmox VE helper script, I deployed a Splunk Enterprise LXC container
 - **Network bridge:** `vmbr2` (my internal lab network)
 - **VLAN tag:** none
 
+
+
 Once the container finished provisioning, the script generated a `splunk.creds` file containing the initial login credentials.
 
-📸 **Screenshot:** Proxmox console showing Splunk container creation  
-📸 **Screenshot:** `splunk.creds` file (credentials redacted)
+![Proxmox console showing Splunk container creation](Screenshots/splunk-install.jpg)
+
+![splunk.creds file (I changed my password :)](Screenshots/splunk-creds.jpg)
 
 ---
 
@@ -53,8 +56,9 @@ From my Kali Linux VM, I navigated to the Splunk Web interface using the IP addr
 
 After logging in with the credentials from `splunk.creds` success! Splunk was up and running.
 
-📸 **Screenshot:** Splunk login page  
-📸 **Screenshot:** Splunk dashboard after first login
+![Splunk login page](Screenshots/splunk-login.jpg)
+
+![Splunk Dashboard](Screenshots/splunk-dashboard.jpg)
 
 Now the real question: **what do I actually do with it?**
 
@@ -69,8 +73,9 @@ The first step was enabling Splunk to receive data from forwarders.
 2. Under **Receive data**, I clicked **Add new**
 3. Set the listening port to **9997**
 
-📸 **Screenshot:** Forwarding and Receiving settings  
-📸 **Screenshot:** Port 9997 configured for receiving data
+![Forwarding and Receiving Settings](Screenshots/forwarding-receiving.jpg)
+
+![Port 9997 configured for receiving data](Screenshots/add-9997.jpg)
 
 ---
 
