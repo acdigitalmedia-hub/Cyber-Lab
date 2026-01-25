@@ -93,7 +93,7 @@ During setup, I configured:
 - **Deployment server:** `<Splunk-IP>:8089`
 - **Receiving indexer:** `<Splunk-IP>:9997`
 
-📸 **Screenshot:** Universal Forwarder setup wizard (server configuration)
+![Windows Universal Forwarder Setup Wizard](Screenshots/win-forwarder-install.jpg)
 
 ---
 
@@ -113,7 +113,7 @@ However, I ran into some friction and decided to configure it manually instead.
 On the Windows Server 2025 system:
 
 1. Opened **Notepad as Administrator**
-2. Edited: C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf
+2. Create the file: C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf
 3. Added the following:
 
 ```ini
@@ -130,6 +130,8 @@ disabled = 0
 index = windows
 ```
 
+
+
 4. Saved the file
     
 5. Restarted the **SplunkForwarder** service via `services.msc`
@@ -137,8 +139,9 @@ index = windows
 
 > **IMPORTANT:** The `windows` index must already exist in Splunk (**Settings → Indexes**) or the data will be dropped. If it doesn't exist, that's okay it's very easy to add. Just go to **Settings → Indexes** and click "New Index". Type in "windows" as the name and click save. Piece of cake!
 
-📸 **Screenshot:** inputs.conf configuration  
-📸 **Screenshot:** Windows Services showing SplunkForwarder restart
+![Windows inputs.conf example](Screenshots/windows-inputs-conf.jpg)
+
+![Windows Services showing SplunkForwarder restart](Screenshots/service-restart.jpg)
 
 ### Validation
 
@@ -153,7 +156,7 @@ In Splunk:
 
 Logs appeared which means indexing was working!
 
-📸 **Screenshot:** Windows event logs in Splunk search
+![Windows Event Logs in Splunk Search](Screenshots/win-splunk-events.jpg)
 
 ---
 
@@ -164,6 +167,8 @@ Next, I repeated the process on my Ubuntu server.
 ### Installation
 
 1. Downloaded the forwarder using `wget`
+
+![wget command for linux install](Screenshots/wget-command.jpg)
     
 2. Installed it:
     
@@ -180,7 +185,7 @@ Next, I repeated the process on my Ubuntu server.
 
 `sudo /opt/splunkforwarder/bin/splunk add forward-server <Splunk-IP>:9997`
 
-📸 **Screenshot:** Ubuntu terminal showing forwarder install and startup
+![Terminal showing forwarder install on Linux](Screenshots/linux-forwarder-install.jpg)
 
 ---
 
@@ -207,7 +212,7 @@ index = linux_logs
 
 `sudo /opt/splunkforwarder/bin/splunk restart`
 
-📸 **Screenshot:** Linux inputs.conf configuration
+![Linux inputs.conf configuration](Screenshots/linux-inputs-conf.jpg)
 
 ### Validation
 
@@ -217,7 +222,7 @@ In Splunk:
 
 Linux logs appeared successfully.
 
-📸 **Screenshot:** Linux logs in Splunk search
+![Linux logs in Splunk search](Screenshots/linux-logs.jpg)
 
 ---
 
@@ -240,7 +245,7 @@ This gave me a working Splunk environment with real data flowing in which is a s
     
 - Index creation matters more than I initially expected
     
-- Manual configuration is sometimes clearer than the GUI
+- Manual configuration is sometimes clearer than the GUI (Although I probably just need to read the docs more)
     
 - Validation searches are essential! Just because it says “installed” doesn’t mean it's “working”
     
