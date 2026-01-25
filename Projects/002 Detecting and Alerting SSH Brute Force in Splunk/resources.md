@@ -15,7 +15,7 @@ This document lists references and documentation that were useful for building a
   Overview of how Splunk searches work and how to interpret results.
 
 - **Search Processing Language (SPL) Reference**  
-  https://docs.splunk.com/Documentation/Splunk/latest/SearchReference  
+  https://docs.splunk.com/Splexicon:Searchprocessinglanguage  
   Reference for SPL commands used to build detection logic.
 
 - **Creating Alerts in Splunk**  
@@ -34,11 +34,11 @@ This document lists references and documentation that were useful for building a
   https://docs.splunk.com/Documentation/Splunk/latest/Data/Monitorfilesanddirectories  
   How Splunk ingests file-based logs such as `/var/log/auth.log`.
 
-- **Linux Authentication Logs (auth.log)**  
-  PLACEHOLDER – Link to Ubuntu or Debian authentication logging documentation
+- **Linux Logs Explained**  
+  https://www.plesk.com/blog/product-technology/linux-logs-explained/
 
 - **SSH Authentication Logging**  
-  PLACEHOLDER – Link to OpenSSH logging and authentication behavior documentation
+  https://last9.io/blog/sshd-logs-101/
 
 ---
 
@@ -49,7 +49,7 @@ This document lists references and documentation that were useful for building a
   Tool used to simulate SSH brute-force attacks in this lab.
 
 - **Hydra Usage Examples**  
-  PLACEHOLDER – Link to Hydra usage or SSH module examples
+  https://www.kali.org/tools/hydra/
 
 > Note: Hydra was used strictly in a controlled lab environment for defensive testing and detection validation.
 
