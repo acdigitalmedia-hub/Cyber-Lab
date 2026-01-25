@@ -70,7 +70,8 @@ This was a good sign! Splunk was clearly capturing the brute-force behavior gene
 
 To make this more useful from a security perspective, I built a more structured search to identify sources with repeated failures:
 
-```index=linux_logs sourcetype=auth "Failed password"  
+```
+index=linux_logs sourcetype=auth "Failed password"  
 | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"  
 | stats count AS failed_attempts by src_ip  
 | where failed_attempts >= 5
@@ -197,7 +198,8 @@ To fix this, I explicitly defined the sourcetype in the Universal Forwarder conf
 
 I edited `inputs.conf` (located in `/opt/splunkforwarder/etc/system/local/`) and updated it to:
 
-```[monitor:///var/log/auth.log]  
+```
+[monitor:///var/log/auth.log]  
 disabled = 0  
 index = linux_logs  
 sourcetype = auth
