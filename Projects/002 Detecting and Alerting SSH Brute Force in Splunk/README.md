@@ -70,7 +70,10 @@ This was a good sign! Splunk was clearly capturing the brute-force behavior gene
 
 To make this more useful from a security perspective, I built a more structured search to identify sources with repeated failures:
 
-`index=linux_logs sourcetype=auth "Failed password" | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" | stats count AS failed_attempts by src_ip | where failed_attempts >= 5`
+`index=linux_logs sourcetype=auth "Failed password" 
+| rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" 
+| stats count AS failed_attempts by src_ip 
+| where failed_attempts >= 5`
 
 This search:
 
@@ -135,7 +138,7 @@ To test the alert, I ran the same Hydra command again. This time, I checked **Tr
 ![](Screenshots/hydra-alerts-multiple.jpg)
     
 
-I noticed **four separate alert entries**, which makes sense given the threshold of `>= 5` failures and the total number of attempts. However, this raised a concern: what if an attacker used a much larger wordlist, such as rockyou.txt? That could generate a lot of alert noise very quickly.
+I noticed **twelve separate alert entries**, which makes sense given the threshold of `>= 5` failures and the total number of attempts (I think). However, this raised a concern: what if an attacker used a much larger wordlist, such as rockyou.txt? That would generate a lot of alert noise very quickly.
 
 To address this, I edited the alert to **suppress triggering for 60 seconds**.
 
@@ -157,7 +160,7 @@ A peek behind the curtain: for my first project, you might notice that my screen
 
 That led to a new question:
 
-> If I attack my Nessus machine with Hydra, will this same alert trigger? And will it look any different?
+If I attack my Nessus machine with Hydra, will this same alert trigger? And will it look any different?
 
 I ran Hydra against the Nessus machine.
 
@@ -193,7 +196,10 @@ To fix this, I explicitly defined the sourcetype in the Universal Forwarder conf
 
 I edited `inputs.conf` (located in `/opt/splunkforwarder/etc/system/local/`) and updated it to:
 
-`[monitor:///var/log/auth.log] disabled = 0 index = linux_logs sourcetype = auth`
+`[monitor:///var/log/auth.log]
+disabled = 0 
+index = linux_logs 
+sourcetype = auth`
 
 ![](Screenshots/fixed-inputs-conf.jpg)
     

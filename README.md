@@ -33,7 +33,7 @@ The intent is not to be exhaustive or academic, but to show how I think, how I t
 | # | Project |
 |---|--------|
 | 001 | Splunk Enterprise – Installation & Basic Configuration
-| 002 | (Coming soon) |
+| 002 | Detecting and Alerting SSH Brute Force in Splunk |
 | 003 | (Coming soon) |
 
 Projects live under the `projects/` directory and are numbered in the order they were completed.
