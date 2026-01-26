@@ -16,7 +16,8 @@ The goal here was to:
     
 - Troubleshoot and fix issues when detection doesn’t work as expected
     
-
+![Cyber Lab Diagram](../../Cyber-Lab-Diagram.jpg)
+    
 ---
 
 ## Establishing a Baseline: Failed SSH Logins

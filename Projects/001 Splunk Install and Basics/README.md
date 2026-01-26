@@ -17,6 +17,8 @@ My lab runs on a Proxmox VE server and already includes several core components:
 - Ubuntu Server (Docker host)
 - Internal lab network (`vmbr2`)
 
+![Cyber Lab Diagram](../../Cyber-Lab-Diagram.jpg)
+
 Splunk Enterprise is deployed as an LXC container within Proxmox.
 
 > **Note:** I used the Proxmox VE Helper Script to deploy Splunk Enterprise. I’m aware some people prefer not to run scripts directly on the Proxmox host. For this test lab, I’m comfortable with that tradeoff, but I’ve included a manual installation alternative below.
