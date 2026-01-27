@@ -145,6 +145,9 @@ index = windows
 
 ![Windows Services showing SplunkForwarder restart](Screenshots/service-restart.jpg)
 
+
+> **Note from the future:**  I now know that I did this process wrong. Or at least, there is a much better way to do it that is native to Splunk. The "friction" I ran into was me trying to follow a guide that was based on an older build of Splunk and it of course did not work. I looked up how to do it the manual way and that's how I ended up here. Yes, it works in the sense of my Windows logs are being ingested into Splunk, but I did eventually figure out the proper, easier way to do this in the current Splunk build. I figure this out in Project 003, if you're interested.
+
 ### Validation
 
 In Splunk:
