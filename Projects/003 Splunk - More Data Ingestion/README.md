@@ -187,7 +187,7 @@ To work around this, I used **iptables** on the Splunk LXC to redirect incoming 
 
 First, install iptables:
 
-`apt update  apt install iptables -y
+`apt update  apt install iptables -y`
 
 Then redirect syslog traffic:
 
