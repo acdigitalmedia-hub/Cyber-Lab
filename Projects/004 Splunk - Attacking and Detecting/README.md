@@ -194,6 +194,8 @@ Now I wanted to do some attacker actions that I might reasonably expect to show 
 
 This wouldn’t exactly be the work of a master hacker. The goal was simply to generate activity and see what Splunk could observe.
 
+![](Screenshots/sloppy-hacking.jpg)
+
 ---
 
 ## Part 2: Detection in Splunk
