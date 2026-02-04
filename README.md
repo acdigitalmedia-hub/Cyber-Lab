@@ -36,7 +36,8 @@ The intent is not to be exhaustive or academic, but to show how I think, how I t
 | 002 | Detecting and Alerting SSH Brute Force in Splunk |
 | 003 | Splunk - More Data Ingestion |
 | 004 | Splunk - Attacking and Detecting |
-| 005 | Coming Soon |
+| 005 | Basic Vulnerability Scanning with Nessus |
+| 006 | TBD |
 
 Projects live under the `projects/` directory and are numbered in the order they were completed.
 
